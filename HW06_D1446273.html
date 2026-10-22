@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>臺中景點風華 - 台中公園導覽網頁 (HW06)</title>
+  <!-- Tailwind CSS 輔助框架 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome 圖標 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- HW06 自訂 CSS 樣式語法 -->
+  <style>
+    :root {
+      --primary-color: #0d9488;
+      --secondary-color: #0f766e;
+      --accent-color: #10b981;
+      --bg-light: #f8fafc;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* 自訂語意元素 CSS 樣式 */
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    nav a {
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #a7f3d0;
+    }
+
+    main {
+      display: block;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    article {
+      background: white;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin: 2rem auto;
+      max-width: 900px;
+    }
+
+    aside {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 1rem;
+      padding: 2rem;
+      max-width: 700px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    figure {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    figcaption {
+      font-size: 0.875rem;
+      color: #64748b;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid #1e293b;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. 【<header>】網頁頂部標頭 -->
+  <header>
+    <div style="max-width: 1150px; margin: 0 auto; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+      <h1 style="font-size: 1.5rem; font-weight: bold; display: flex; align-items: center; gap: 0.5rem;">
+        <i class="fa-solid fa-tree" style="color: #6ee7b7;"></i> 臺中景點風華：台中公園
+      </h1>
+      <!-- 2. 【<nav>】導覽列 -->
+      <nav style="display: flex; gap: 1.5rem; font-weight: 500;">
+        <a href="#about">關於公園</a>
+        <a href="#spots">四大亮點</a>
+        <a href="#weather">即時氣象</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 3. 【<main>】網頁主要內容容器 -->
+  <main>
+
+    <!-- 4. 【<section>】獨立區段：主視覺 Banner -->
+    <section style="background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') center/cover; color: white; text-align: center; padding: 5rem 1rem; max-width: 100%;">
+      <div style="max-width: 700px; margin: 0 auto;">
+        <span style="background: #10b981; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 9999px; text-transform: uppercase;">城市綠洲標竿</span>
+        <h2 style="font-size: 2.5rem; font-weight: 800; margin-top: 1rem; margin-bottom: 1rem;">百年心臟，湖心風波</h2>
+        <p style="font-size: 1.125rem; color: #cbd5e1; margin-bottom: 2rem;">結合傳統歷史底蘊與現代休閒風貌，探索臺中市內最悠久的都市綠洲。</p>
+        <a href="#spots" style="background: #10b981; color: white; font-weight: bold; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">探索熱門景點</a>
+      </div>
+    </section>
+
+    <!-- 5. 【<article>】獨立文章區塊：歷史與深度介紹 -->
+    <article id="about">
+      <h3 style="font-size: 1.875rem; font-weight: bold; text-align: center; margin-bottom: 1rem; color: #0f172a;">百年歷史風華</h3>
+      <p style="color: #475569; margin-bottom: 1.5rem; line-height: 1.8;">
+        台中公園設立於日治時期明治四十年（1907年），是臺中市歷史最悠久的公園。園內的「湖心亭」於1908年為慶祝縱貫線鐵路全通式而興建，現為臺中市的市定古蹟與城市精神象徵。
+      </p>
+      
+      <!-- 7. 【<figure>】與【<figcaption>】圖文並茂語意元素 -->
+      <figure>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="台中公園景色" style="width: 100%; height: 320px; object-fit: cover; border-radius: 0.75rem;">
+        <figcaption>圖：台中公園日月湖與周邊綠意盎然的景致</figcaption>
+      </figure>
+    </article>
+
+    <!-- 4. 【<section>】獨立區段：景點列表 -->
+    <section id="spots">
+      <h3 style="font-size: 1.875rem; font-weight: bold; text-align: center; margin-bottom: 3rem; color: #0f172a;">園區經典四大景點</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
+          <h4 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem; color: #0d9488;">湖心亭</h4>
+          <p style="color: #64748b; font-size: 0.875rem;">臺中市定古蹟，建於1908年，雙脊尖頂的赤瓦建築。</p>
+        </div>
+
+        <div style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
+          <h4 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem; color: #0d9488;">日月湖劃船</h4>
+          <p style="color: #64748b; font-size: 0.875rem;">園區核心人造湖泊，提供踩踏船與划船悠遊體驗。</p>
+        </div>
+
+        <div style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
+          <h4 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem; color: #0d9488;">中山橋 (朱紅洋橋)</h4>
+          <p style="color: #64748b; font-size: 0.875rem;">橫跨日月湖的古典木造紅色洋橋，熱門攝影景點。</p>
+        </div>
+
+        <div style="background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
+          <h4 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem; color: #0d9488;">老樹與生態區</h4>
+          <p style="color: #64748b; font-size: 0.875rem;">擁有多株百年老榕樹與豐富生態的城市綠肺。</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. 【<aside>】側邊欄/補充資訊：即時氣象 -->
+    <aside id="weather">
+      <h3 style="font-size: 1.5rem; font-weight: bold; color: #0f172a; margin-bottom: 0.5rem;"><i class="fa-solid fa-cloud-sun" style="color: #0d9488;"></i> 臺中公園即時旅遊天氣顧問</h3>
+      <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 1rem;">此欄位為網頁補充資訊 (Aside 語意區塊)</p>
+      
+      <div id="weather-info" style="background: white; padding: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        <p style="font-weight: 600; color: #0d9488;">📍 臺中市中區 (台中公園)</p>
+        <p style="font-size: 2rem; font-weight: bold; margin: 0.5rem 0; color: #0f172a;">26°C <span style="font-size: 1rem; font-weight: normal; color: #64748b;">晴時多雲</span></p>
+        <p style="font-size: 0.875rem; color: #64748b;">適合劃船與戶外散步，建議做好基礎防曬。</p>
+      </div>
+      <button onclick="updateWeather()" style="margin-top: 1rem; background: #0d9488; color: white; border: none; padding: 0.5rem 1.5rem; border-radius: 0.375rem; cursor: pointer; font-weight: 500;">刷新即時建議</button>
+    </aside>
+
+  </main>
+
+  <!-- 8. 【<footer>】網頁底部標註 -->
+  <footer>
+    <p style="font-size: 0.875rem;">數位行銷程式設計基礎課 - HW06 CSS 樣式美化專案</p>
+    <p style="font-size: 0.75rem; color: #64748b; margin-top: 0.5rem;">© 2026 台中公園導覽網頁 All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function updateWeather() {
+      const weatherBox = document.getElementById('weather-info');
+      weatherBox.innerHTML = `
+        <p style="font-weight: 600; color: #0d9488;">📍 臺中市中區 (台中公園)</p>
+        <p style="font-size: 2rem; font-weight: bold; margin: 0.5rem 0; color: #0f172a;">27°C <span style="font-size: 1rem; font-weight: normal; color: #10b981;">微風舒適</span></p>
+        <p style="font-size: 0.875rem; color: #64748b;">資料已更新！目前氣候非常適合遊湖與拍照。</p>
+      `;
+    }
+  </script>
+</body>
+</html>
